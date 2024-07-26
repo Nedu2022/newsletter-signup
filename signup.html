@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="/css/signup.css">
   <title>Signup Page</title>
 </head>
 <body>
@@ -11,15 +11,12 @@
 
   
   <div class="form-section">
-    <h1>Sign up</h1>
-    <form action="" class="input-element">
-      <input type="text" name="username" placeholder="Username">
-      <input type="password" name="password" placeholder="Password">
-      <div id="rememberMe">
-        <input  type="checkbox" name="rememberMe">
-        <label for="rememberMe">Remember Me</label>
-      </div>
-      <button type="submit" class="submit-btn">Sign up</button>
+    <h1>Sign Up To Nnedu Newsletter</h1>
+    <form action="/" class="input-element" method="post">
+      <input type="text" name="fName" placeholder="First Name" required autofocus>
+      <input type="text" name="lName" placeholder="Last Name" required >
+      <input type="email" name="email" placeholder="Email">
+      <button type="submit" class="submit-btn">Sign Me up!</button>
     </form>
   </div>
   
@@ -29,7 +26,7 @@
   </div>
 </div>
   <footer>
-    <p>&copy; 2023 - 2024 Nnedu. All rights reserved.</p>
+    <p>&copy;Nnedu</p>
   </footer>
   
 </body>

@@ -51,50 +51,30 @@ body {
   align-items: center;
 }
 
-.input-element input[type="text"], .input-element input[type="password"] {
+.input-element input[type="text"], .input-element input[type="email"] {
   width: 100%;
-  padding: 15px;
-  margin: 15px 0;
+  padding: 13px;
+  margin: 12px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-#rememberMe {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 15px;
-
-}
-
-#rememberMe input[type="checkbox"] {
-  margin-right: 8px;
-} 
 
 
 
 .submit-btn {
   padding: 13px 30px;
-  background-color: #4caf50;
+  background-color: #5597dd;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
-
-}
-
-.button {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+
 }
 
-.button:hover {
+
+.submit-btn:hover {
   background-color: #0056b3;
 }
 
