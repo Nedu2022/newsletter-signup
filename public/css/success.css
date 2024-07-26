@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.success-box {
+  background-color: #ffffff;
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  font-size: 50px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.success-title {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.continue-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.continue-button:hover {
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 768px) {
+  .error-box {
+    padding: 40px 24px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+}

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const request = require("request");
 const https = require("https");
 const { url } = require('inspector');
+const path = require('path');
 
 const app = express();
 
@@ -37,18 +38,30 @@ app.post("/", function(req, res) {
 
   const options = {
     method: "POST",
-    auth: "nnedu1:3bb0e6b15154a0df6df567cd475a4dd0-us17"
+    auth: "nnedu1:70e21a84f70869acb66edb231308fcc5-us17"
   }
 
   const request = https.request(url, options, function(response) {
-    response.on("data", function(data){
-      console.log(JSON.parse(data));
-    })
-  })
+
+    response.on('data', function (data) {
+      const parsedData = JSON.parse(data);
+
+      if (response.statusCode === 200 && parsedData.error_count === 0) {
+        res.sendFile(path.join(__dirname, 'public', 'success.html'));
+      } else {
+        res.sendFile(path.join(__dirname, 'public', 'failure.html'));
+      }
+
+    });
+  });
 
   request.write(jsonData);
   request.end();
   
+});
+
+app.post("/failure", function(req, res) {
+  res.redirect("/");
 })
 
 
